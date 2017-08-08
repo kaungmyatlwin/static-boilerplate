@@ -23,7 +23,7 @@ If you already have Node and NPM, then follow the steps below.
 ### 1. Clone this repo.
 e.g: `git clone https://github.com/kaungmyatlwin/static-boilerplate.git`
 
-**quick tip** : If you're already in project directory, add `.` at the end of command to clone in that file.
+**quick tip** : If you're already in project directory, add `.` at the end of command to clone in current directory.
 
 ### 2. Install Dependencies
 Run `npm install`. This might take a minute.
