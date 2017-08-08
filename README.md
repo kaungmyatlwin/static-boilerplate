@@ -20,18 +20,19 @@ You need to have [NodeJS](https://nodejs.org/en/).
 
 If you already have Node and NPM, then follow the steps below.
 
-1. Clone this repo.
+### 1. Clone this repo.
 e.g: `git clone https://github.com/kaungmyatlwin/static-boilerplate.git`
-** quick tip ** : If you're already in project directory, add `.` at the end of command.
 
-2. Install Dependencies
+**quick tip** : If you're already in project directory, add `.` at the end of command to clone in that file.
+
+### 2. Install Dependencies
 Run `npm install`. This might take a minute.
 
-3. Run Development Command
+### 3. Run Development Command
 
 Use either `npm run dev` or `gulp` to start web sever.
 
-4. Build Project [Optional]
+### 4. Build Project [Optional]
 
 Use `npm run build` or `gulp build`.
 
