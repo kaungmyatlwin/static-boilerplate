@@ -6,9 +6,9 @@ const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
 const plumber = require('gulp-plumber');
 const imagemin = require('gulp-imagemin');
-const rimraf = require('rimraf');
+const rimraf = require('gulp-rimraf');
 
-gulp.task('serve', ['sass', 'imgmin'],()=> {
+gulp.task('default', ['sass', 'imgmin'],()=> {
   browswerSync.init({
     server: {
       baseDir: './src/'
@@ -35,13 +35,17 @@ gulp.task('imgmin', () => {
          .pipe(browswerSync.stream());
 });
 
+gulp.task('clean', () => {
+  return gulp.src('dist/*', { read: false }).pipe(rimraf());
+});
+
 gulp.task('js', () => {
   return gulp.src('src/js/**/*.js')
          .pipe(uglify())
          .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('build', ['imgmin', 'sass', 'js'], () => {
-  return gulp.src(['!src/css/*.scss', 'src/img/*', 'src/**/*'])
+gulp.task('build', ['clean', 'imgmin', 'sass', 'js'], () => {
+  return gulp.src(['!src/css/**/*.scss', 'src/**/*'])
     .pipe(gulp.dest('dist'));
 });
