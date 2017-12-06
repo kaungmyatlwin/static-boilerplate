@@ -8,7 +8,7 @@ const plumber = require('gulp-plumber');
 const imagemin = require('gulp-imagemin');
 const rimraf = require('gulp-rimraf');
 
-gulp.task('default', ['sass', 'imgmin'],()=> {
+gulp.task('default', ['sass'],()=> {
   browswerSync.init({
     server: {
       baseDir: './src/'
